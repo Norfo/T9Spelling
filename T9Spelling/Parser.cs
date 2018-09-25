@@ -81,6 +81,9 @@ namespace T9Spelling
                 prevVal = temp;
             }
 
+            if (result == "")
+                return result;
+
             return String.Format("{0}\r\n", result);
         }
     }

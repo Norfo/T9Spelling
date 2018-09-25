@@ -14,6 +14,7 @@ namespace T9Spelling
                 {
                     string line = sr.ReadToEnd();
                     return line;
+                    sr.Close();
                 }
             }
             catch (Exception e)
