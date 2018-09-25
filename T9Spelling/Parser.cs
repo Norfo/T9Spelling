@@ -56,7 +56,7 @@ namespace T9Spelling
             return resultString;
         }
 
-        private string ConvertLine(string chars)
+        public string ConvertLine(string chars)
         {
             string result = "";
             chars = chars.Trim('\r', '\n');
