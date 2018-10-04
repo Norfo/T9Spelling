@@ -16,7 +16,7 @@ namespace T9Spelling
                 sw.Close();
             }                
 
-            MessageBox.Show("File successfully  saved!");
+            MessageBox.Show("File successfully saved!");
         }
 
     }
