@@ -15,6 +15,8 @@ namespace T9Spelling
 
         public string RawData { get; set; } = "";
         public string ConvertedData { get; set; } = "";
+
+        public bool IsLinqDecoderSelected { get; set; } = false;
         #endregion
 
         #region Commands
@@ -46,7 +48,7 @@ namespace T9Spelling
         }
         private void Decode()
         {
-            ConvertedData = new LinqDecoder().Convert(RawData);
+            ConvertedData = IsLinqDecoderSelected ? new LinqDecoder().Convert(RawData) : new LoopDecoder().Convert(RawData);
         }
 
         private void SaveFile()

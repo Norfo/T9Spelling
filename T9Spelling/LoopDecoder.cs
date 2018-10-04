@@ -30,8 +30,8 @@ namespace T9Spelling
 
                 string converted = ConvertLine(line);
 
-                if (converted == String.Empty)
-                    continue;
+                /*if (converted == String.Empty)
+                    continue;*/
 
                 sb.Append(String.Format("Case #{0}: {1}", i, converted));
             }

@@ -21,6 +21,10 @@
                 Margin="0 10 0 0"
                 Content="Long practice"
                 Command="{Binding ReadLargePracticeCommand}"/>
+            <CheckBox
+                Margin="0 10 0 0"
+                Content="Linq Decoder"
+                IsChecked="{Binding IsLinqDecoderSelected, Mode=TwoWay}"/>
             <Button
                 Margin="0 10 0 0"
                 Content="Convert"
@@ -30,6 +34,7 @@
                 Margin="0 10 0 0"
                 Content="Save Data"
                 Command="{Binding SaveFileCommand}"/>
+
         </StackPanel>
 
         <Grid

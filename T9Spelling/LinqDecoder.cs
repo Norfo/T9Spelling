@@ -17,7 +17,10 @@ namespace T9Spelling
             StringBuilder sb = new StringBuilder();
             string[] lines = data.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
-            var result = lines.Where((line) => line != String.Empty).Select((line, index) => String.Format("Case #{0}: {1}", index, ConvertLine(line)));
+            var result = lines.Where((line, index) => line != String.Empty && index != 0)
+                        .Select((line, index) => String.Format("Case #{0}: {1}", index + 1, ConvertLine(line))) //"index + 1" because first message informs about message number of cases
+                        .Where((line)=>line.Length != 0);
+
             foreach (var item in result)
             {
                 sb.Append(item);
