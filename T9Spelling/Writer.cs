@@ -10,13 +10,20 @@ namespace T9Spelling
             if (!File.Exists(path))
                 File.Create(path);
 
-            using (System.IO.StreamWriter sw = new System.IO.StreamWriter(path))
+            try
             {
-                sw.WriteLine(data);
-                sw.Close();
-            }                
+                using (System.IO.StreamWriter sw = new System.IO.StreamWriter(path))
+                {
+                    sw.Write(data);
+                }
+                MessageBox.Show("File successfully saved!");
+            }
+            catch (System.Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }           
 
-            MessageBox.Show("File successfully saved!");
+
         }
 
     }

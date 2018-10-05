@@ -48,7 +48,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParserTests.cs" />
+    <Compile Include="DecoderTests.cs" />
+    <Compile Include="LinqDecoderTests.cs" />
+    <Compile Include="LoopDecoderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
